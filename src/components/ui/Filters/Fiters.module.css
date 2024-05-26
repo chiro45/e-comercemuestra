@@ -60,3 +60,17 @@
 .containerPrices {
   left: 50%;
 }
+
+/* Para dispositivos grandes (laptops, desktops pequeños) */
+@media (min-width: 992px) {
+  .containerPrincipal__filters {
+    width: 60%;
+  }
+}
+
+/* Para dispositivos extra grandes (desktops grandes) */
+@media (min-width: 1200px) {
+  .containerPrincipal__filters {
+    width: 50%;
+  }
+}

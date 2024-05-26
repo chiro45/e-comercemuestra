@@ -5,12 +5,7 @@ import { ChangeEvent } from "react";
 import { ProductService } from "../../../services/ProductService";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { setProducts } from "../../../redux/slices/Products";
-import { Filters } from "../Filters/Filters";
-import {
-  setCategory,
-  setPrice,
-  setSearch,
-} from "../../../redux/slices/Filters";
+import { setPrice, setSearch } from "../../../redux/slices/Filters";
 const URLAPI = import.meta.env.VITE_API_URL;
 
 export const SearchBar = () => {
@@ -34,22 +29,24 @@ export const SearchBar = () => {
   };
 
   return (
-    <div className={styles.containner__SearchBar}>
-      <TextField
-        style={{ width: "98%" }}
-        onChange={onchange}
-        autoComplete="off"
-        label="Ingrese un producto"
-        name="product"
-        value={searchBar}
-        InputProps={{
-          endAdornment: (
-            <Button onClick={handleSearchByName} variant="contained">
-              <IconCustom icon="search" />
-            </Button>
-          ),
-        }}
-      />
+    <div className={styles.containnerPrincipal__SearchBar}>
+      <div className={styles.containner__SearchBar}>
+        <TextField
+          style={{ width: "98%" }}
+          onChange={onchange}
+          autoComplete="off"
+          label="Ingrese un producto"
+          name="product"
+          value={searchBar}
+          InputProps={{
+            endAdornment: (
+              <Button onClick={handleSearchByName} variant="contained">
+                <IconCustom icon="search" />
+              </Button>
+            ),
+          }}
+        />
+      </div>
     </div>
   );
 };

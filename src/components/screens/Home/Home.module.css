@@ -1,20 +1,17 @@
 .containerPrincipal__home {
   width: 98vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2vh;
-  position: relative;
   background-color: var(--primary);
 }
 .containerimg__home {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15%;
-  width: 100%;
+  height: 15vh;
+  margin: 1vh;
   position: relative;
 }
 .containerimg__home img {
@@ -36,6 +33,8 @@
   border-radius: 0.4rem;
   max-height: 80%;
   background-color: var(--secondary);
+  margin-bottom: 2vh;
+
   border-radius: 0.4rem;
   overflow-y: auto;
 }
@@ -53,35 +52,22 @@
 /* Para dispositivos pequeños (tabletas en orientación vertical, teléfonos grandes) */
 @media (min-width: 600px) {
   .containerCardsCategories {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 1vh;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    width: 90%;
+  }
+  .containerimg__home {
+    height: 18vh;
   }
 }
 
 /* Para dispositivos grandes (laptops, desktops pequeños) */
 @media (min-width: 992px) {
   .containerimg__home {
-    height: 20%;
+    height: 25vh;
   }
 }
 
 /* Para dispositivos extra grandes (desktops grandes) */
 @media (min-width: 1200px) {
-  .containerPrincipal__home {
-    width: 100%;
-    height: 90vh;
-  }
-
-  .containerimg__home {
-    height: 25%;
-  }
-
   .text__home {
     color: #fff;
   }

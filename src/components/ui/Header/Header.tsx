@@ -2,7 +2,7 @@ import { AppBar, Toolbar } from "@mui/material";
 import { IconCustom } from "../Icon/Icon";
 import { alertError } from "../../../helpers/alerts";
 import { useNavigate } from "react-router-dom";
-
+import styles from "./Header.module.css";
 export const Header = () => {
   const handleAlert = () => {
     alertError("Proximamente", "Todavia no esta disponible");
@@ -14,23 +14,9 @@ export const Header = () => {
   return (
     <AppBar position="static" style={{ backgroundColor: "var(--primary)" }}>
       <Toolbar variant="dense">
-        <div
-          style={{
-            width: "100%",
-            height: "8vh",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
+        <div className={styles.containerItems__Header}>
           <IconCustom icon="local_mall" fnOnclick={returnCategories} />
-          <div
-            style={{
-              width: "20%",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
+          <div className={styles.containerActions}>
             <IconCustom fnOnclick={handleAlert} icon="account_circle" />
             <IconCustom fnOnclick={handleAlert} icon="shopping_cart" />
           </div>
