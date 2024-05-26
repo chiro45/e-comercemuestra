@@ -1,10 +1,15 @@
 import { AppBar, Toolbar } from "@mui/material";
 import { IconCustom } from "../Icon/Icon";
 import { alertError } from "../../../helpers/alerts";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const handleAlert = () => {
     alertError("Proximamente", "Todavia no esta disponible");
+  };
+  const navigate = useNavigate();
+  const returnCategories = () => {
+    navigate("/");
   };
   return (
     <AppBar position="static">
@@ -16,7 +21,7 @@ export const Header = () => {
             justifyContent: "space-between",
           }}
         >
-          <IconCustom icon="local_mall" />
+          <IconCustom icon="local_mall" fnOnclick={returnCategories} />
           <div
             style={{
               width: "20%",

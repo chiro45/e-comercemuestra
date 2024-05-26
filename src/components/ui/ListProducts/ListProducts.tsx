@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { CardProduct } from "../CardProduct/CardProduct";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import {
   setProducts,
@@ -7,6 +6,7 @@ import {
 } from "../../../redux/slices/Products";
 import { ProductService } from "../../../services/ProductService";
 import styles from "./ListProducts.module.css";
+import { CardProduct } from "../cards/CardProduct/CardProduct";
 const URLAPI = import.meta.env.VITE_API_URL;
 export const ListProducts = () => {
   const dispatch = useAppDispatch();
@@ -24,12 +24,17 @@ export const ListProducts = () => {
   };
 
   const getProductsByName = async (name: string) => {
-    const res = await productService.findByName(name);
-    dispatch(setProducts(res));
-    if (filters.price) {
-      dispatch(
-        sortProductsByPrice(filters.price === "Mayor Precio" ? false : true)
+    if (filters.category) {
+      const res = await productService.findByNameAndCategory(
+        filters.category,
+        name
       );
+      dispatch(setProducts(res));
+      if (filters.price) {
+        dispatch(
+          sortProductsByPrice(filters.price === "Mayor Precio" ? false : true)
+        );
+      }
     }
   };
 

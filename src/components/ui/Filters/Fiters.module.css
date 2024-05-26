@@ -1,9 +1,10 @@
 .containerPrincipal__filters {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   position: relative;
   height: 6vh;
+  margin-bottom: 0.3rem;
   width: 98%;
 }
 .container__filters {
@@ -58,7 +59,7 @@
 }
 .containerCategoriesDiv p .containerPricesDiv p {
   text-align: center;
-  width: 100%;
+  width: 50%;
 }
 
 .containerCategories {

@@ -1,12 +1,12 @@
-import { Button } from "@mui/material";
-import { IconCustom } from "../Icon/Icon";
 import { FC } from "react";
-import { Iproduct } from "../../../types/Iproduct";
+import { alertError } from "../../../../helpers/alerts";
+import { Iproduct } from "../../../../types/Iproduct";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../../hooks/redux";
-import { setProductActive } from "../../../redux/slices/Products";
+import { useAppDispatch } from "../../../../hooks/redux";
+import { setProductActive } from "../../../../redux/slices/Products";
 import styles from "./CardProduct.module.css";
-import { alertError } from "../../../helpers/alerts";
+import { IconCustom } from "../../Icon/Icon";
+import { Button } from "@mui/material";
 
 interface ICardProduct {
   product: Iproduct;

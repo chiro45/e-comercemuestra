@@ -2,27 +2,33 @@
   "categories": [
     {
       "id": "1",
-      "denomination": "Vegetariana"
+      "denomination": "Vegetariana",
+      "image": "https://mx.birdman.com/cdn/shop/articles/buddha-bowl-vegano-un-platillo-super-balanceado-750151_900x.jpg?v=1616616334"
     },
     {
       "id": "2",
-      "denomination": "Pizzas"
+      "denomination": "Pizzas",
+      "image": "https://www.hearthandfirepizza.com/cdn/shop/products/product-beauty-the-margherita_1100x.png?v=1656423819"
     },
     {
       "id": "3",
-      "denomination": "Papas"
+      "denomination": "Papas",
+      "image": "https://imagenes.20minutos.es/files/image_640_360/uploads/imagenes/2022/01/12/un-plato-de-patatas-fritas-recien-hechas.jpeg"
     },
     {
       "id": "4",
-      "denomination": "Hamburguesas"
+      "denomination": "Hamburguesas",
+      "image": "https://www.pronacatqma.com/images/com_yoorecipe/banner_superior/18231_1.jpg"
     },
     {
       "id": "5",
-      "denomination": "Postres"
+      "denomination": "Postres",
+      "image": "https://content-cocina.lecturas.com/medio/2023/03/23/el-mejor-pastel-de-chocolate_b43ef72b_900x900.jpg"
     },
     {
       "id": "6",
-      "denomination": "Bebidas"
+      "denomination": "Bebidas",
+      "image": "https://media.vogue.mx/photos/5ecbbb4df863d188d6f3185c/master/w_1600,c_limit/jugo-de-naranja--naranja.jpg"
     }
   ],
   "products": [

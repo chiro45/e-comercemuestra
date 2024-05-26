@@ -5,6 +5,7 @@ import { ChangeEvent } from "react";
 import { ProductService } from "../../../services/ProductService";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { setProducts } from "../../../redux/slices/Products";
+import { Filters } from "../Filters/Filters";
 import {
   setCategory,
   setPrice,
@@ -13,7 +14,6 @@ import {
 const URLAPI = import.meta.env.VITE_API_URL;
 
 export const SearchBar = () => {
-  const searchValue = useAppSelector((state) => state.filters.searchBar);
   const dispatch = useAppDispatch();
 
   const onchange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -21,12 +21,16 @@ export const SearchBar = () => {
   };
 
   const productService = new ProductService(`${URLAPI}/products`);
-
+  const { category, searchBar } = useAppSelector((state) => state.filters);
   const handleSearchByName = async () => {
-    const res = await productService.findByName(searchValue);
-    dispatch(setProducts(res));
-    dispatch(setCategory(null));
-    dispatch(setPrice(null));
+    if (category) {
+      const res = await productService.findByNameAndCategory(
+        category,
+        searchBar
+      );
+      dispatch(setProducts(res));
+      dispatch(setPrice(null));
+    }
   };
 
   return (
@@ -37,7 +41,7 @@ export const SearchBar = () => {
         autoComplete="off"
         label="Ingrese un producto"
         name="product"
-        value={searchValue}
+        value={searchBar}
         InputProps={{
           endAdornment: (
             <Button onClick={handleSearchByName} variant="contained">
@@ -49,5 +53,3 @@ export const SearchBar = () => {
     </div>
   );
 };
-
-
