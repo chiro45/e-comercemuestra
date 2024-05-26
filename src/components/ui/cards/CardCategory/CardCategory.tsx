@@ -24,13 +24,13 @@ export const CardCategory: FC<ICardCategory> = ({ category }) => {
       onClick={() => {
         handleSelectCategory();
       }}
-      sx={{ width: `90%`, height: "90%" }}
+      sx={{ width: `100%`, height: "90%" }}
     >
-      <CardMedia component="img" height={"60%"} image={category.image} />
+      <CardMedia component="img" height={"70%"} image={category.image} />
       <CardContent>
-        <Typography variant="body2" color="text.primary" textAlign={"center"}>
+        <h2 style={{ textAlign: "center", fontSize: "2.1vh" }}>
           {category.denomination}
-        </Typography>
+        </h2>
       </CardContent>
     </Card>
   );
