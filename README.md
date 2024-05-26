@@ -6,5 +6,7 @@ npm install
 ======= EJECUTAR=========
 npm run dev
 =======inicializar json server=====
+
 en otra terminal=> dentro del mismo directorio
+
 npm run devJson
