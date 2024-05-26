@@ -12,13 +12,15 @@ export const Header = () => {
     navigate("/");
   };
   return (
-    <AppBar position="static">
+    <AppBar position="static" style={{ backgroundColor: "var(--primary)" }}>
       <Toolbar variant="dense">
         <div
           style={{
             width: "100%",
+            height: "8vh",
             display: "flex",
             justifyContent: "space-between",
+            alignItems: "center",
           }}
         >
           <IconCustom icon="local_mall" fnOnclick={returnCategories} />

@@ -25,13 +25,12 @@
   display: flex;
   justify-content: flex-start;
   gap: 1vh;
-  height: 6vh;
+  height: 4vh;
   width: 95%;
   margin-left: 5%;
   color: #4e4e4e;
 }
 
-.containerCategories,
 .containerPrices {
   width: 50%;
   max-height: 50vh;
@@ -45,11 +44,7 @@
   flex-direction: column;
   align-items: center;
 }
-.containerCategories {
-  max-height: 50vh;
-  overflow-y: auto;
-}
-.containerCategoriesDiv,
+
 .containerPricesDiv {
   width: 100%;
   height: 100%;
@@ -57,14 +52,11 @@
   justify-content: center;
   border-bottom: 1px solid #ccc;
 }
-.containerCategoriesDiv p .containerPricesDiv p {
+.containerPricesDiv p {
   text-align: center;
-  width: 50%;
+  width: 100%;
 }
 
-.containerCategories {
-  left: 0%;
-}
 .containerPrices {
   left: 50%;
 }
