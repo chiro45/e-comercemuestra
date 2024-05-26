@@ -1,6 +1,7 @@
 Aplicacion de ecomerce, primera iteracion
 
 ========DESCARGAR DEPENDENCIAS======
+
 npm install
 
 ======= EJECUTAR=========
