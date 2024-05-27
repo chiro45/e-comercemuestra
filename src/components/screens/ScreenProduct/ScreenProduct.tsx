@@ -49,9 +49,9 @@ export const ScreenProduct = () => {
               <Carrousel images={product!.images} />
             </div>
             <div className={styles.containerProps}>
-              <div>
+              <div style={{ textAlign: "center" }}>
                 <div>
-                  <p>{product!.description}</p>
+                  <p style={{ fontSize: "2vh" }}>{product!.description}</p>
                 </div>
                 <div>${product!.price}</div>
               </div>

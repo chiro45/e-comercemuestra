@@ -37,7 +37,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 70vw;
+  width: 100%;
 }
 
 .containerProps {
@@ -58,4 +58,27 @@
   align-items: center;
   justify-content: center;
   gap: 1vh;
+}
+
+/* Para dispositivos medianos (tabletas en orientación horizontal, pantallas pequeñas de laptops) */
+@media (min-width: 768px) {
+  .container__Product {
+    width: 60vw;
+    height: 80vh;
+  }
+}
+
+/* Para dispositivos grandes (laptops, desktops pequeños) */
+@media (min-width: 992px) {
+  .container__Product {
+    width: 60vw;
+    height: 80vh;
+  }
+  .container__imageAndTitle {
+    width: 100%;
+  }
+  .container__gridProduct {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
