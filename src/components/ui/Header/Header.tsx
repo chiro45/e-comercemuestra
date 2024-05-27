@@ -15,7 +15,7 @@ export const Header = () => {
     <AppBar position="static" style={{ backgroundColor: "var(--primary)" }}>
       <Toolbar variant="dense">
         <div className={styles.containerItems__Header}>
-          <IconCustom icon="local_mall" fnOnclick={returnCategories} />
+          <IconCustom icon="arrow_back" fnOnclick={returnCategories} />
           <div className={styles.containerActions}>
             <IconCustom fnOnclick={handleAlert} icon="account_circle" />
             <IconCustom fnOnclick={handleAlert} icon="shopping_cart" />
