@@ -15,14 +15,19 @@ export class ProductService extends BackendClient<Iproduct> {
     return result as Iproduct[];
   }
 
-  async findByName(name: string): Promise<Iproduct[]> {
+  async findByNameAndCategory(
+    category: string,
+    name: string
+  ): Promise<Iproduct[]> {
     const response = await fetch(`${this.baseUrl}/`);
     const data = await response.json();
-
-    const result = data.filter((el: { denomination: string }) =>
+    const result = data.filter(
+      (el: { category: string }) => el.category === category
+    );
+    const resultByName = result.filter((el: { denomination: string }) =>
       el.denomination.toLowerCase().includes(name.toLowerCase())
     );
 
-    return result as Iproduct[];
+    return resultByName as Iproduct[];
   }
 }

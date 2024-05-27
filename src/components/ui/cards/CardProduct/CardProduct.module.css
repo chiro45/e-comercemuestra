@@ -3,6 +3,7 @@
   width: 100%;
   min-height: 20vh;
   background-color: #fff;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
   border-radius: 0.4rem;
   position: relative;
   justify-content: center;
@@ -57,4 +58,15 @@
 
 .viewMore__CardProduct {
   color: #1976d2;
+}
+
+/* Para dispositivos pequeños (tabletas en orientación vertical, teléfonos grandes) */
+@media (min-width: 600px) {
+}
+
+/* Para dispositivos grandes (laptops, desktops pequeños) */
+@media (min-width: 992px) {
+  .containerProduct__CardProduct {
+    max-height: 10vh;
+  }
 }

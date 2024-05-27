@@ -19,3 +19,23 @@
   gap: 1vh;
   flex-direction: column;
 }
+
+/* Para dispositivos pequeños (tabletas en orientación vertical, teléfonos grandes) */
+@media (min-width: 600px) {
+  .containerPrincipal__ListProducts {
+    width: 97%;
+  }
+  .containerProducts__ListProducts {
+    width: 70%;
+  }
+}
+
+/* Para dispositivos grandes (laptops, desktops pequeños) */
+@media (min-width: 992px) {
+  .containerPrincipal__ListProducts {
+    width: 60%;
+  }
+  .containerProducts__ListProducts {
+    width: 70%;
+  }
+}

@@ -36,58 +36,52 @@ export const ScreenProduct = () => {
 
   return (
     <>
-      {product && (
-        <>
-          <div className={styles.containerPrincipal__Product}>
-            <div className={styles.container__Product}>
-              <div className={styles.buttonBack__product}>
-                <Button onClick={handleNavigationBack} variant="contained">
-                  <IconCustom icon="arrow_back" /> Volver atras
-                </Button>
-              </div>
-              <div className={styles.container__gridProduct}>
-                <div className={styles.container__imageAndTitle}>
-                  <h2>{product.denomination}</h2>
-                  <Carrousel images={product.images} />
-                </div>
+      <div className={styles.containerPrincipal__Product}>
+        <div className={styles.container__Product}>
+          <div className={styles.buttonBack__product}>
+            <Button onClick={handleNavigationBack} variant="contained">
+              <IconCustom icon="arrow_back" /> Volver atras
+            </Button>
+          </div>
+          <div className={styles.container__gridProduct}>
+            <div className={styles.container__imageAndTitle}>
+              <h2>{product!.denomination}</h2>
+              <Carrousel images={product!.images} />
+            </div>
+            <div className={styles.containerProps}>
+              <div style={{ textAlign: "center" }}>
                 <div>
-                  <div>
-                    <div>
-                      <p>{product.description}</p>
-                    </div>
-                    <div>${product.price}</div>
-                  </div>
-                  <div className={styles.productContainerActions__Product}>
-                    <div className={styles.productAmount__Product}>
-                      <Button
-                        disabled={amount === 0 && true}
-                        variant="contained"
-                        onClick={decrementAmount}
-                      >
-                        <IconCustom
-                          icon={`${amount > 1 ? "remove" : "delete"}`}
-                        />
-                      </Button>
-                      <h2>Cantidad: {amount}</h2>
-                      <Button variant="contained" onClick={incrementAmount}>
-                        <IconCustom icon="add" />
-                      </Button>
-                    </div>
-                    <Button
-                      onClick={handleAddToCart}
-                      color="success"
-                      variant="contained"
-                    >
-                      Agregar al carrito <IconCustom icon="add_shopping_cart" />
-                    </Button>
-                  </div>
+                  <p style={{ fontSize: "2vh" }}>{product!.description}</p>
                 </div>
+                <div>${product!.price}</div>
+              </div>
+              <div className={styles.productContainerActions__Product}>
+                <div className={styles.productAmount__Product}>
+                  <Button
+                    disabled={amount === 0 && true}
+                    variant="contained"
+                    onClick={decrementAmount}
+                  >
+                    <IconCustom icon={`${amount > 1 ? "remove" : "delete"}`} />
+                  </Button>
+                  <h2>Cantidad: {amount}</h2>
+                  <Button variant="contained" onClick={incrementAmount}>
+                    <IconCustom icon="add" />
+                  </Button>
+                </div>
+                <Button
+                  onClick={handleAddToCart}
+                  color="success"
+                  variant="contained"
+                >
+                  Agregar al carrito <IconCustom icon="add_shopping_cart" />
+                </Button>
               </div>
             </div>
           </div>
-          <Footer />
-        </>
-      )}
+        </div>
+      </div>
+      <Footer />
     </>
   );
 };
